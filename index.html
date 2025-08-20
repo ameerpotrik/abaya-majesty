@@ -509,7 +509,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-elegant font-bold mb-4">Elegance</h3>
+                    <h3 class="text-2xl font-elegant font-bold mb-4">Abaya Majesty</h3>
                     <p class="text-gray-400 mb-4">Premium modest fashion that celebrates elegance and tradition.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-gold transition-colors duration-300">
@@ -545,15 +545,16 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
                     <div class="space-y-2 text-gray-400">
-                        <p><i class="fas fa-envelope mr-2"></i> hello@elegance.com</p>
-                        <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> New York, NY</p>
+                        <p><i class="fas fa-envelope mr-2"></i> hello@abayamajesty.com</p>
+                        <!-- <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p> -->
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> India</p>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Elegance Abaya Collection. All rights reserved.</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400" 
+                x-data="{ year: new Date().getFullYear() }">
+                <p>&copy; <span x-text="year"></span> Abaya Majesty. All rights reserved.</p>
             </div>
         </div>
     </footer>
