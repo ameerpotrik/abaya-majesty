@@ -51,8 +51,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6B46C1',
-                        secondary: '#D946EF',
+                        primary: '#422e25',
+                        secondary: '#060504',
                         accent: '#FEF7ED',
                         'gold': '#D4A574'
                     },
@@ -69,7 +69,7 @@
     <style>
         
         .hero-gradient {
-            background: linear-gradient(135deg, #6B46C1 0%, #9333EA 50%, #D946EF 100%);
+            background: linear-gradient(135deg, #422e25 0%, #422e25 50%, #b99269 100%);
         }
         
         .glass-effect {
@@ -114,58 +114,68 @@
         }
         
         @keyframes pulseGlow {
-            from { box-shadow: 0 0 20px rgba(107, 70, 193, 0.3); }
-            to { box-shadow: 0 0 30px rgba(107, 70, 193, 0.6); }
+            from { box-shadow: 0 0 20px rgba(185, 130, 105, 0.3); }
+            to   { box-shadow: 0 0 30px rgba(185, 130, 105, 0.6); }
         }
+
+        :target {
+        scroll-margin-top: 6rem; /* equal to navbar height */
+        }
+
     </style>
 </head>
 <body class="bg-gradient-to-br from-accent to-white font-sans overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-effect border-b border-white/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24"> <!-- increased nav height -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="flex items-center">
+    <!-- Navigation -->
+<nav 
+    x-data="{ scrolled: false }" 
+    @scroll.window="scrolled = window.scrollY > 50"
+    :class="scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'"
+    class="fixed top-0 w-full z-50 transition-colors duration-300 border-b border-white/20">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-24">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center">
                     <img 
                         src="./images/abaya-majesty-logo.png" 
                         alt="Abaya Majesty Logo" 
                         class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md"
                     >
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:block">
+                <div class="flex items-center space-x-8">
+                    <a href="#home" class="hover:text-gold transition-colors duration-300">Home</a>
+                    <a href="#collection" class="hover:text-gold transition-colors duration-300">Collection</a>
+                    <a href="./returns-and-exchange-policy.html" class="hover:text-gold transition-colors duration-300">
+                        Return, Exchange & Shipping Policy
                     </a>
                 </div>
-
-
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
-                        <a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
-                        <a href="#collection" class="text-gray-700 hover:text-primary transition-colors duration-300">Collection</a>
-                        <a href="./returns-and-exchange-policy.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Return, Exchange & Shipping Policy</a>
-                        <!-- <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-300">Contact</a> -->
-                        <!-- <button @click="showContactForm = true" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
-                            Get In Touch
-                        </button> -->
-                    </div>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-primary" aria-label="Toggle navigation menu">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white/95 backdrop-blur-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-700">Home</a>
-                <a href="#collection" class="block px-3 py-2 text-gray-700">Collection</a>
-                <a href="./returns-and-exchange-policy.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Return and Exchange Policy</a>
-                <!-- <a href="#contact" class="block px-3 py-2 text-gray-700">Contact</a> -->
-            </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white/95 backdrop-blur-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#home" class="block px-3 py-2 text-black hover:text-primary">Home</a>
+            <a href="#collection" class="block px-3 py-2 text-black hover:text-primary">Collection</a>
+            <a href="./returns-and-exchange-policy.html" class="block px-3 py-2 text-black hover:text-primary">
+                Return and Exchange Policy
+            </a>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -196,7 +206,7 @@
     </section>
 
     <!-- Featured Products Section -->
-    <section id="collection" class="py-20 bg-gradient-to-br from-white to-accent">
+    <section id="collection" class="py-20 bg-gradient-to-br from-white to-accent scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
                 <h2 class="text-4xl md:text-5xl font-elegant font-bold text-gray-800 mb-4">
@@ -224,7 +234,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Modest Bride outfit</h3>
                         <p class="text-gray-600 mb-4">Classic black abaya with intricate embroidery</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Modest Bride outfit" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -244,7 +254,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridesmaid Cape Abaya</h3>
                         <p class="text-gray-600 mb-4">Delicate pink with floral patterns</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Bridesmaid Cape Abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -264,7 +274,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Royal Bride Cape Abaya</h3>
                         <p class="text-gray-600 mb-4">Luxurious purple with gold details</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Royal Bride Cape Abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -284,7 +294,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Casual Fashion Wear</h3>
                         <p class="text-gray-600 mb-4">Pristine white with pearl accents</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Casual Fashion Wear" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -304,7 +314,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Emerald Grace</h3>
                         <p class="text-gray-600 mb-4">Deep green with elegant draping</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Emerald Grace abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -324,7 +334,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Golden Hour</h3>
                         <p class="text-gray-600 mb-4">Warm beige with golden threading</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Golden Hour abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -344,7 +354,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridal shower Dress</h3>
                         <p class="text-gray-600 mb-4">Deep navy with silver trim</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Bridal shower Dress" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -364,7 +374,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Burgundy Majesty</h3>
                         <p class="text-gray-600 mb-4">Rich burgundy with velvet texture</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Burgundy Majesty abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -384,7 +394,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Party Wear Outfit</h3>
                         <p class="text-gray-600 mb-4">Soft pink with delicate lace details</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Party Wear Outfit" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -404,7 +414,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bride Gown</h3>
                         <p class="text-gray-600 mb-4">Modern charcoal with minimalist design</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Bride Gown" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -424,7 +434,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Sapphire Dream</h3>
                         <p class="text-gray-600 mb-4">Royal blue with crystal embellishments</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Sapphire Dream abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -444,7 +454,7 @@
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Nikah Abaya</h3>
                         <p class="text-gray-600 mb-4">Subtle mauve with ethereal flow</p>
                         <a href="https://wa.me/971504202725?text=I'm interested in the Nikah Abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
+                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
                         </a>
@@ -536,7 +546,7 @@
                         <input type="text" required placeholder="Full Name" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary">
                         <input type="email" required placeholder="Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary mt-4">
                         <textarea required placeholder="Your Message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary mt-4 resize-none"></textarea>
-                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-xl font-semibold hover:bg-purple-800 transition-colors duration-300 mt-4">
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-xl font-semibold hover:bg-brown-800 transition-colors duration-300 mt-4">
                             Send Message
                         </button>
                     </div>
@@ -616,7 +626,7 @@
             @scroll.window="showScrollTop = window.pageYOffset > 300"
             x-show="showScrollTop"
             x-transition
-            class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-purple-800 transition-all duration-300 z-40">
+            class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-brown-800 transition-all duration-300 z-40">
         <i class="fas fa-arrow-up"></i>
     </button>
 

@@ -22,23 +22,25 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            primary: '#6B46C1',
-            secondary: '#D946EF',
-            accent: '#FEF7ED',
-            'gold': '#D4A574'
-          },
-          fontFamily: {
-            'arabic': ['Amiri', 'serif'],
-            'elegant': ['Playfair Display', 'serif']
-          }
+            colors: {
+                primary: '#422e25',
+                secondary: '#060504',
+                accent: '#FEF7ED',
+                'gold': '#D4A574'
+            },
+            fontFamily: {
+                'arabic': ['Amiri', 'serif'],
+                'elegant': ['Playfair Display', 'serif']
+            }
         }
       }
     }
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-    .hero-gradient { background: linear-gradient(135deg, #6B46C1 0%, #9333EA 50%, #D946EF 100%); }
+    .hero-gradient {
+            background: linear-gradient(135deg, #422e25 0%, #422e25 50%, #b99269 100%);
+        }
     .glass-effect { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
     .fade-in-up { animation: fadeInUp .8s ease-out; }
     @keyframes fadeInUp { from{opacity:0; transform:translateY(30px)} to{opacity:1; transform:translateY(0)} }
@@ -47,27 +49,35 @@
 <body class="bg-gradient-to-br from-accent to-white font-sans overflow-x-hidden">
 
   <!-- Fixed Navigation -->
-  <nav class="fixed top-0 w-full z-50 glass-effect border-b border-white/20">
+  <!-- Fixed Navigation -->
+  <nav 
+    x-data="{ scrolled: false }" 
+    @scroll.window="scrolled = window.scrollY > 50"
+    :class="scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'"
+    class="fixed top-0 w-full z-50 transition-colors duration-300 border-b border-white/20">
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-24">
+        
+        <!-- Logo -->
         <div class="flex-shrink-0">
           <a href="index.html" class="flex items-center">
             <img src="./images/abaya-majesty-logo.png" alt="Abaya Majesty Logo"
-                 class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
+                class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
           </a>
         </div>
 
         <!-- Desktop Menu -->
         <div class="hidden md:block">
           <div class="flex items-center space-x-8">
-            <a href="index.html#home" class="text-gray-700 hover:text-primary">Home</a>
-            <a href="index.html#collection" class="text-gray-700 hover:text-primary">Collection</a>
-            <a href="./returns-and-exchange-policy.html" class="text-primary font-medium">Return, Exchange & Shipping Policy</a>
+            <a href="index.html#home" class="hover:text-gold transition-colors duration-300">Home</a>
+            <a href="index.html#collection" class="hover:text-gold transition-colors duration-300">Collection</a>
+            <a href="./returns-and-exchange-policy.html" class="hover:text-gold font-medium text-gold">Return, Exchange & Shipping Policy</a>
           </div>
         </div>
 
         <!-- Mobile Menu Button -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-primary">
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden">
           <i class="fas fa-bars text-xl"></i>
         </button>
       </div>
@@ -76,17 +86,19 @@
     <!-- Mobile Menu -->
     <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white/95 backdrop-blur-lg">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="index.html#home" class="block px-3 py-2 text-gray-700">Home</a>
-        <a href="index.html#collection" class="block px-3 py-2 text-gray-700">Collection</a>
-        <a href="./returns-and-exchange-policy.html" class="block px-3 py-2 text-primary font-medium">Return, Exchange & Shipping Policy</a>
+        <a href="index.html#home" class="block px-3 py-2 text-black hover:text-primary">Home</a>
+        <a href="index.html#collection" class="block px-3 py-2 text-black hover:text-primary">Collection</a>
+        <a href="./returns-and-exchange-policy.html" class="block px-3 py-2 text-gold font-medium">Return, Exchange & Shipping Policy</a>
       </div>
     </div>
   </nav>
 
-  <!-- Page Header (adds top padding to clear fixed nav) -->
-  <header class="hero-gradient pt-28 pb-14 text-center text-white">
+  <!-- Page Header -->
+  <header class="hero-gradient min-h-[60vh] flex items-center justify-center text-center text-white">
     <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-elegant font-bold mb-3">Return, Exchange & Shipping Policy</h1>
+      <h1 class="text-4xl md:text-5xl font-elegant font-bold mb-3">
+        Return, Exchange & Shipping Policy
+      </h1>
       <p class="text-white/90">Thank you for shopping at Abaya Majesty.</p>
     </div>
   </header>
