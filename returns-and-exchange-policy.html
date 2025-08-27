@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ mobileMenuOpen: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abaya Majesty - Return & Exchange Policy</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Read Abaya Majesty’s Return and Exchange Policy. Learn about our order cancellation rules, shipping timelines, and how we maintain quality and hygiene standards in our premium modest fashion collections.">
+  <meta name="keywords" content="abaya majesty return policy, exchange policy abaya, modest fashion returns, abaya shipping policy, abaya exchange, abaya cancellation policy, premium abayas online, modest fashion india, abaya store return and exchange">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6B46C1',
+            secondary: '#D946EF',
+            accent: '#FEF7ED',
+            'gold': '#D4A574'
+          },
+          fontFamily: {
+            'arabic': ['Amiri', 'serif'],
+            'elegant': ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+    .hero-gradient { background: linear-gradient(135deg, #6B46C1 0%, #9333EA 50%, #D946EF 100%); }
+    .glass-effect { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
+    .fade-in-up { animation: fadeInUp .8s ease-out; }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(30px)} to{opacity:1; transform:translateY(0)} }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-accent to-white font-sans overflow-x-hidden">
+
+  <!-- Fixed Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-effect border-b border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex items-center">
+            <img src="./images/abaya-majesty-logo.png" alt="Abaya Majesty Logo"
+                 class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="flex items-center space-x-8">
+            <a href="index.html#home" class="text-gray-700 hover:text-primary">Home</a>
+            <a href="index.html#collection" class="text-gray-700 hover:text-primary">Collection</a>
+            <a href="./returns-and-exchange-policy.html" class="text-primary font-medium">Return, Exchange & Shipping Policy</a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-primary">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white/95 backdrop-blur-lg">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html#home" class="block px-3 py-2 text-gray-700">Home</a>
+        <a href="index.html#collection" class="block px-3 py-2 text-gray-700">Collection</a>
+        <a href="./returns-and-exchange-policy.html" class="block px-3 py-2 text-primary font-medium">Return, Exchange & Shipping Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header (adds top padding to clear fixed nav) -->
+  <header class="hero-gradient pt-28 pb-14 text-center text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-elegant font-bold mb-3">Return, Exchange & Shipping Policy</h1>
+      <p class="text-white/90">Thank you for shopping at Abaya Majesty.</p>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <article class="bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8 leading-relaxed text-gray-800">
+      <section id="returns">
+        <h2 class="text-2xl font-semibold mb-2">Returns & Exchanges</h2>
+        <p>
+          Due to the nature of our products - and to maintain hygiene and modesty standards - we do not offer refunds
+          or exchanges. <strong>All sales are final.</strong>
+        </p>
+      </section>
+
+      <section id="cancellations">
+        <h2 class="text-2xl font-semibold mb-2">Order Cancellations</h2>
+        <p>
+          Once an order is placed, it cannot be canceled or modified. Please review your order carefully before confirming your purchase.
+        </p>
+      </section>
+
+      <section id="shipping-policy">
+        <h2 class="text-2xl font-semibold mb-2">Shipping Policy</h2>
+        <p class="mb-4">
+          We offer reasonable shipping charges depending on your region. We use DHL, FedEx, and local express services
+          based on availability and delivery times.
+        </p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Orders are typically dispatched within <strong>15–18 days</strong>.</li>
+          <li>Pre-ordered products may take <strong>20–25 working days</strong> to dispatch.</li>
+          <li>Couriers do not operate on weekends and bank holidays.</li>
+        </ul>
+        <p class="mt-4">
+          Once your order is packed and picked up, you will receive an email with your tracking number.
+          To check the status, click the tracking link in that email. If you didn’t receive a tracking number,
+          please contact us at <a class="text-primary underline" href="mailto:abayamajesty0312@gmail.com">abayamajesty0312@gmail.com</a>.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <img src="./images/abaya-majesty-logo.png" alt="Abaya Majesty Logo"
+               class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
+          <p class="text-gray-400 mb-4">Premium modest fashion that celebrates elegance and tradition.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/abaya_majesty0312" class="text-gray-400 hover:text-gold transition-colors duration-300">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html#home" class="hover:text-white transition-colors duration-300">Home</a></li>
+            <li><a href="index.html#collection" class="hover:text-white transition-colors duration-300">Collection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+          <div class="space-y-2 text-gray-400">
+            <p><i class="fas fa-envelope mr-2"></i>
+              <a href="mailto:abayamajesty0312@gmail.com">abayamajesty0312@gmail.com</a>
+            </p>
+            <p><i class="fas fa-map-marker-alt mr-2"></i> India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400" x-data="{ year: new Date().getFullYear() }">
+        <p>&copy; <span x-text="year"></span> Abaya Majesty. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- (Optional) Smooth scroll if you add #ids on this page -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

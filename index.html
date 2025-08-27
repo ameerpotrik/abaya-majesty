@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abaya Majesty - Premium Modest Fashion</title>
+    <title>Abaya Majesty | Premium Abayas & Modest Fashion</title>
+    <!-- put these at the very top of <head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Primary SEO -->
+    <meta name="description" content="Discover premium abayas and modest fashion from Abaya Majesty. Bridal and occasion wear with elegant detailing, bespoke sizing, and careful craftsmanship. Fast shipping to India & UAE.">
+    <meta name="keywords" content="abaya, premium abayas, modest fashion, bridal abaya, nikah abaya, cape abaya, party wear abaya, abaya India, abaya UAE, Abaya Majesty">
+    <meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://abayamajesty.com/">
+
+    <!-- Open Graph (Facebook/WhatsApp/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Abaya Majesty">
+    <meta property="og:title" content="Abaya Majesty | Premium Abayas & Modest Fashion">
+    <meta property="og:description" content="Premium abayas for bridal, occasion, and everyday elegance. Bespoke sizing and beautiful craftsmanship.">
+    <meta property="og:url" content="https://abayamajesty.com/">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abaya Majesty | Premium Abayas & Modest Fashion">
+    <meta name="twitter:description" content="Premium abayas with elegant detailing and bespoke sizing. Shop bridal & occasion wear.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Abaya Majesty",
+    "url": "https://abayamajesty.com/",
+    "logo": "https://abayamajesty.com/images/abaya-majesty-logo.png",
+    "sameAs": ["https://www.instagram.com/abaya_majesty0312"]
+    }
+    </script>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -106,6 +140,7 @@
                     <div class="flex items-center space-x-8">
                         <a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
                         <a href="#collection" class="text-gray-700 hover:text-primary transition-colors duration-300">Collection</a>
+                        <a href="./returns-and-exchange-policy.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Return, Exchange & Shipping Policy</a>
                         <!-- <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-300">Contact</a> -->
                         <!-- <button @click="showContactForm = true" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             Get In Touch
@@ -125,6 +160,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home" class="block px-3 py-2 text-gray-700">Home</a>
                 <a href="#collection" class="block px-3 py-2 text-gray-700">Collection</a>
+                <a href="./returns-and-exchange-policy.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Return and Exchange Policy</a>
                 <!-- <a href="#contact" class="block px-3 py-2 text-gray-700">Contact</a> -->
             </div>
         </div>
@@ -177,16 +213,16 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 1 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-1.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Midnight Elegance Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Modest Bride outfit" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 1 }">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300"
                              :class="{ 'opacity-100': hoveredProduct === 1 }">
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Midnight Elegance</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Modest Bride outfit</h3>
                         <p class="text-gray-600 mb-4">Classic black abaya with intricate embroidery</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Midnight Elegance abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Modest Bride outfit" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -200,13 +236,13 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 2 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-2.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Rose Blossom Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Bridesmaid Cape Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 2 }">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Rose Blossom</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridesmaid Cape Abaya</h3>
                         <p class="text-gray-600 mb-4">Delicate pink with floral patterns</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Rose Blossom abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Bridesmaid Cape Abaya" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -220,13 +256,13 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 3 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-3.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Royal Purple Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Royal Bride Cape Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 3 }">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Royal Purple</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Royal Bride Cape Abaya</h3>
                         <p class="text-gray-600 mb-4">Luxurious purple with gold details</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Royal Purple abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Royal Bride Cape Abaya" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -240,13 +276,13 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 4 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-4.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Pearl White Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Casual Fashion Wear" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 4 }">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Pearl White</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Casual Fashion Wear</h3>
                         <p class="text-gray-600 mb-4">Pristine white with pearl accents</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Pearl White abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Casual Fashion Wear" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -300,13 +336,13 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 7 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-6.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Navy Sophisticate Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Bridal shower Dress" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 7 }">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Navy Sophisticate</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridal shower Dress</h3>
                         <p class="text-gray-600 mb-4">Deep navy with silver trim</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Navy Sophisticate abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Bridal shower Dress" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -340,13 +376,13 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 9 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-8.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Dusty Rose Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Party wear Outfit" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 9 }">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Dusty Rose</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Party Wear Outfit</h3>
                         <p class="text-gray-600 mb-4">Soft pink with delicate lace details</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Dusty Rose abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Party Wear Outfit" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -360,13 +396,13 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 10 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-9.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Charcoal Chic Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Bride Gown" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 10 }">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Charcoal Chic</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bride Gown</h3>
                         <p class="text-gray-600 mb-4">Modern charcoal with minimalist design</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Charcoal Chic abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Bride Gown" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -400,13 +436,13 @@
                      :class="{ 'shadow-2xl': hoveredProduct === 12 }">
                     <div class="relative overflow-hidden">
                         <img src="./images/image-11.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Mauve Mystique Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
+                             alt="Nikah Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
                              :class="{ 'scale-110': hoveredProduct === 12 }">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Mauve Mystique</h3>
+                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Nikah Abaya</h3>
                         <p class="text-gray-600 mb-4">Subtle mauve with ethereal flow</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Mauve Mystique abaya" 
+                        <a href="https://wa.me/971504202725?text=I'm interested in the Nikah Abaya" 
                            class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Chat on WhatsApp
@@ -527,8 +563,10 @@
                     <p class="text-gray-400 mb-4">Premium modest fashion that celebrates elegance and tradition.</p>
                     <div class="flex space-x-4">
                         <a href="https://www.instagram.com/abaya_majesty0312" class="text-gray-400 hover:text-gold transition-colors duration-300">
-                            <i class="fab fa-instagram text-xl"></i>
+                            <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
+                            <span class="sr-only">Follow us on Instagram</span>
                         </a>
+
                     </div>
                 </div>
                 
@@ -537,6 +575,7 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#home" class="hover:text-white transition-colors duration-300">Home</a></li>
                         <li><a href="#collection" class="hover:text-white transition-colors duration-300">Collection</a></li>
+                        <li><a href="./returns-and-exchange-policy.html" class="hover:text-white transition-colors duration-300">Return, Exchange & Shipping Policy</a></li>
                         <!-- <li><a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a></li> -->
                     </ul>
                 </div>
