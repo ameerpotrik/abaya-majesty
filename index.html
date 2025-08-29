@@ -220,249 +220,678 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8" x-data="{ hoveredProduct: null }">
                 <!-- Product 1 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 1" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 1 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-1.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Modest Bride outfit" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 1 }">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300"
-                             :class="{ 'opacity-100': hoveredProduct === 1 }">
-                        </div>
+                    @mouseenter="hoveredProduct = 1" 
+                    @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 1 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-1.jpeg" 
+                        alt="Modest Bride Outfit" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 1 }"
+                        @click="$dispatch('open-image', './images/image-1.jpeg')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Modest Bride Outfit</h3>
+                    <p class="text-gray-600 mb-4">Classic black abaya with intricate embroidery</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Modest Bride outfit</h3>
-                        <p class="text-gray-600 mb-4">Classic black abaya with intricate embroidery</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Modest Bride outfit" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Modest Bride Outfit. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 2 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 2" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 2 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-2.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Bridesmaid Cape Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 2 }">
+                    @mouseenter="hoveredProduct = 2" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 2 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-2.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Bridesmaid Cape Abaya" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 2 }"
+                        @click="$dispatch('open-image', './images/image-2.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridesmaid Cape Abaya</h3>
+                    <p class="text-gray-600 mb-4">Delicate pink with floral patterns</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridesmaid Cape Abaya</h3>
-                        <p class="text-gray-600 mb-4">Delicate pink with floral patterns</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Bridesmaid Cape Abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Bridesmaid Cape Abaya. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 3 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 3" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 3 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-3.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Royal Bride Cape Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 3 }">
+                    @mouseenter="hoveredProduct = 3" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 3 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-3.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Royal Bride Cape Abaya" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 3 }"
+                        @click="$dispatch('open-image', './images/image-3.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Royal Bride Cape Abaya</h3>
+                    <p class="text-gray-600 mb-4">Luxurious purple with gold details</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Royal Bride Cape Abaya</h3>
-                        <p class="text-gray-600 mb-4">Luxurious purple with gold details</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Royal Bride Cape Abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Royal Bride Cape Abaya. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 4 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 4" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 4 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-4.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Casual Fashion Wear" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 4 }">
+                    @mouseenter="hoveredProduct = 4" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 4 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                   <img src="./images/image-4.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Casual Fashion Wear" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 4 }"
+                        @click="$dispatch('open-image', './images/image-4.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Casual Fashion Wear</h3>
+                    <p class="text-gray-600 mb-4">Pristine white with pearl accents</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Casual Fashion Wear</h3>
-                        <p class="text-gray-600 mb-4">Pristine white with pearl accents</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Casual Fashion Wear" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Casual Fashion Wear. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 5 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 5" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 5 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-12.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Emerald Grace Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 5 }">
+                    @mouseenter="hoveredProduct = 5" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 5 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-12.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Emerald Grace Abaya" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 5 }"
+                        @click="$dispatch('open-image', './images/image-12.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Emerald Grace</h3>
+                    <p class="text-gray-600 mb-4">Deep green with elegant draping</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Emerald Grace</h3>
-                        <p class="text-gray-600 mb-4">Deep green with elegant draping</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Emerald Grace abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Emerald Grace Abaya. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
+                </div>
                 </div>
 
                 <!-- Product 6 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 6" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 6 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-5.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Golden Hour Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 6 }">
+                    @mouseenter="hoveredProduct = 6" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 6 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                   <img src="./images/image-5.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Golden Hour Abaya" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 6 }"
+                        @click="$dispatch('open-image', './images/image-5.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Golden Hour</h3>
+                    <p class="text-gray-600 mb-4">Warm beige with golden threading</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Golden Hour</h3>
-                        <p class="text-gray-600 mb-4">Warm beige with golden threading</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Golden Hour abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Golden Hour Abaya. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 7 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 7" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 7 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-6.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Bridal shower Dress" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 7 }">
+                    @mouseenter="hoveredProduct = 7" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 7 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                   <img src="./images/image-6.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Bridal Shower Dress" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 7 }"
+                        @click="$dispatch('open-image', './images/image-6.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridal shower Dress</h3>
+                    <p class="text-gray-600 mb-4">Deep navy with silver trim</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bridal shower Dress</h3>
-                        <p class="text-gray-600 mb-4">Deep navy with silver trim</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Bridal shower Dress" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Bridal shower Dress. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 8 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 8" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 8 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-7.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Burgundy Majesty Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 8 }">
+                    @mouseenter="hoveredProduct = 8" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 8 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-7.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Burgundy Majesty Abaya" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 8 }"
+                        @click="$dispatch('open-image', './images/image-7.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Burgundy Majesty</h3>
+                    <p class="text-gray-600 mb-4">Rich burgundy with velvet texture</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Burgundy Majesty</h3>
-                        <p class="text-gray-600 mb-4">Rich burgundy with velvet texture</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Burgundy Majesty abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Burgundy Majesty Abaya. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 9 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 9" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 9 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-8.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Party wear Outfit" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 9 }">
+                    @mouseenter="hoveredProduct = 9" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 9 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-8.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Party Wear Outfit" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 9 }"
+                        @click="$dispatch('open-image', './images/image-8.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Party Wear Outfit</h3>
+                    <p class="text-gray-600 mb-4">Soft pink with delicate lace details</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Party Wear Outfit</h3>
-                        <p class="text-gray-600 mb-4">Soft pink with delicate lace details</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Party Wear Outfit" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Party Wear Outfit. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 10 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 10" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 10 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-9.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Bride Gown" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 10 }">
+                    @mouseenter="hoveredProduct = 10" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 10 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-9.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Bride Gown" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 10 }"
+                        @click="$dispatch('open-image', './images/image-9.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bride Gown</h3>
+                    <p class="text-gray-600 mb-4">Modern charcoal with minimalist design</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Bride Gown</h3>
-                        <p class="text-gray-600 mb-4">Modern charcoal with minimalist design</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Bride Gown" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Bride Gown. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 11 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 11" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 11 }">
-                    <div class="relative overflow-hidden">
-                        <img src="./images/image-10.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Sapphire Dream Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 11 }">
+                    @mouseenter="hoveredProduct = 11" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 11 }"
+                    x-data="{ size: 'XS' }">
+
+                <!-- Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./images/image-10.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Sapphire Dream Abaya" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 11 }"
+                        @click="$dispatch('open-image', './images/image-10.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                </div>
+
+                <!-- Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Sapphire Dream</h3>
+                    <p class="text-gray-600 mb-4">Royal blue with crystal embellishments</p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                    <div class="flex gap-2 mb-4">
+                        <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                        <button 
+                            @click="size = opt"
+                            x-text="opt"
+                            :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                            class="px-3 py-1 rounded-full text-sm transition">
+                        </button>
+                        </template>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Sapphire Dream</h3>
-                        <p class="text-gray-600 mb-4">Royal blue with crystal embellishments</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Sapphire Dream abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                    <!-- WhatsApp Order -->
+                    <a :href="'https://wa.me/971504202725?text=I\'m interested in the Sapphire Dream Abaya. Size: '+size"
+                        target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <!-- View Size Chart -->
+                    <button @click="$dispatch('open-sizechart')" 
+                            class="text-sm text-gray-500 underline block">
+                        View Size Chart
+                    </button>
                     </div>
                 </div>
+                </div>
+
 
                 <!-- Product 12 -->
                 <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
-                     @mouseenter="hoveredProduct = 12" @mouseleave="hoveredProduct = null"
-                     :class="{ 'shadow-2xl': hoveredProduct === 12 }">
+                    @mouseenter="hoveredProduct = 12" @mouseleave="hoveredProduct = null"
+                    :class="{ 'shadow-2xl': hoveredProduct === 12 }"
+                    x-data="{ size: 'XS' }">
+
+                    <!-- Image -->
                     <div class="relative overflow-hidden">
                         <img src="./images/image-11.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Nikah Abaya" class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300"
-                             :class="{ 'scale-110': hoveredProduct === 12 }">
+                        alt="Nikah Abaya" 
+                        class="w-full h-96 md:h-[28rem] lg:h-[30rem] object-cover transition-transform duration-300 cursor-pointer"
+                        :class="{ 'scale-110': hoveredProduct === 12 }"
+                        @click="$dispatch('open-image', './images/image-11.jpeg?auto=compress&cs=tinysrgb&w=400')">
                     </div>
+
+                    <!-- Content -->
                     <div class="p-6">
                         <h3 class="text-xl font-elegant font-semibold text-gray-800 mb-2">Nikah Abaya</h3>
                         <p class="text-gray-600 mb-4">Subtle mauve with ethereal flow</p>
-                        <a href="https://wa.me/971504202725?text=I'm interested in the Nikah Abaya" 
-                           class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition-all duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Chat on WhatsApp
-                        </a>
+
+                        <!-- Size Selector -->
+                        <div class="mb-6">
+                            <div class="flex gap-2 mb-4">
+                                <template x-for="opt in ['XS','S','M','Custom']" :key="opt">
+                                <button 
+                                    @click="size = opt"
+                                    x-text="opt"
+                                    :class="size === opt ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                                    class="px-3 py-1 rounded-full text-sm transition">
+                                </button>
+                                </template>
+                            </div>
+
+                            <!-- WhatsApp Order -->
+                            <a :href="'https://wa.me/971504202725?text=I\'m interested in the Nikah Abaya. Size: '+size"
+                                target="_blank"
+                                class="inline-flex items-center justify-center w-full bg-primary text-white py-3 rounded-full hover:bg-brown-800 transition transform hover:scale-105 mb-4">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                Order on WhatsApp
+                            </a>
+
+                            <!-- View Size Chart -->
+                            <button @click="$dispatch('open-sizechart')" 
+                                    class="text-sm text-gray-500 underline block">
+                                View Size Chart
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Global Fullscreen Image Modal -->
+        <div x-data="{ showImage: false, activeImage: '' }"
+            @open-image.window="activeImage = $event.detail; showImage = true; document.body.classList.add('overflow-hidden')"
+            x-show="showImage"
+            x-transition
+            class="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+            style="display:none"
+            @keydown.window.escape="showImage=false; document.body.classList.remove('overflow-hidden')"
+            @click.self="showImage=false; document.body.classList.remove('overflow-hidden')">
+
+        <!-- Close Button -->
+        <button @click="showImage=false; document.body.classList.remove('overflow-hidden')" 
+                class="absolute top-4 right-4 text-white text-3xl font-bold">✕</button>
+
+        <!-- Image -->
+        <img :src="activeImage" 
+            alt="Fullscreen Product Image" 
+            class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-lg">
+        </div>
     </section>
+
+    <!-- Global Size Chart Modal (only once) -->
+  <div x-data="{ showChart: false }"
+       @open-sizechart.window="showChart = true; document.body.classList.add('overflow-hidden')"
+       x-show="showChart"
+       x-transition
+       class="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+       style="display:none"
+       @keydown.window.escape="showChart=false; document.body.classList.remove('overflow-hidden')">
+
+    <div class="bg-white rounded-xl p-6 max-w-3xl w-full relative overflow-x-auto"
+         @click.away="showChart=false; document.body.classList.remove('overflow-hidden')">
+
+      <button @click="showChart = false; document.body.classList.remove('overflow-hidden')"
+              class="absolute top-3 right-3 text-gray-500 hover:text-black">✕</button>
+
+      <h3 class="text-lg font-semibold mb-4">Abaya Size Chart</h3>
+
+      <table class="w-full border border-gray-300 text-sm text-left">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="px-3 py-2 border">Size</th>
+            <th class="px-3 py-2 border">Length</th>
+            <th class="px-3 py-2 border">Shoulder</th>
+            <th class="px-3 py-2 border">Sleeves</th>
+            <th class="px-3 py-2 border">Bust</th>
+            <th class="px-3 py-2 border">Hips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="px-3 py-2 border">XS</td><td class="px-3 py-2 border">50</td><td class="px-3 py-2 border">15</td><td class="px-3 py-2 border">20</td><td class="px-3 py-2 border">40</td><td class="px-3 py-2 border">46</td></tr>
+          <tr><td class="px-3 py-2 border">S</td><td class="px-3 py-2 border">52</td><td class="px-3 py-2 border">15.5</td><td class="px-3 py-2 border">21</td><td class="px-3 py-2 border">42</td><td class="px-3 py-2 border">48</td></tr>
+          <tr><td class="px-3 py-2 border">M</td><td class="px-3 py-2 border">54</td><td class="px-3 py-2 border">16</td><td class="px-3 py-2 border">22</td><td class="px-3 py-2 border">44</td><td class="px-3 py-2 border">50</td></tr>
+          <tr><td class="px-3 py-2 border">L</td><td class="px-3 py-2 border">56</td><td class="px-3 py-2 border">16.5</td><td class="px-3 py-2 border">23</td><td class="px-3 py-2 border">46</td><td class="px-3 py-2 border">52</td></tr>
+          <tr><td class="px-3 py-2 border">XL</td><td class="px-3 py-2 border">58</td><td class="px-3 py-2 border">17</td><td class="px-3 py-2 border">24</td><td class="px-3 py-2 border">48</td><td class="px-3 py-2 border">54</td></tr>
+          <tr><td class="px-3 py-2 border">XXL</td><td class="px-3 py-2 border">60</td><td class="px-3 py-2 border">17</td><td class="px-3 py-2 border">24</td><td class="px-3 py-2 border">50</td><td class="px-3 py-2 border">58</td></tr>
+          <tr><td class="px-3 py-2 border">XXXL</td><td class="px-3 py-2 border">62</td><td class="px-3 py-2 border">18</td><td class="px-3 py-2 border">25</td><td class="px-3 py-2 border">52</td><td class="px-3 py-2 border">60</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
     <!-- Contact Section -->
     <!-- <section id="contact" class="py-20 hero-gradient relative">
