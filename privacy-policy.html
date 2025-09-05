@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ mobileMenuOpen: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abaya Majesty - Privacy Policy</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Read Abaya Majesty’s Privacy Policy. Learn how we collect, use, and protect your personal data, including cookies, account details, and information shared through our website and services.">
+  <meta name="keywords" content="abaya majesty privacy policy, abaya privacy, modest fashion privacy, abaya majesty data protection, abaya majesty cookies, abaya majesty personal data, abaya majesty website policy">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+            colors: {
+                primary: '#422e25',
+                secondary: '#060504',
+                accent: '#FEF7ED',
+                'gold': '#D4A574'
+            },
+            fontFamily: {
+                'arabic': ['Amiri', 'serif'],
+                'elegant': ['Playfair Display', 'serif']
+            }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+    .hero-gradient {
+            background: linear-gradient(135deg, #422e25 0%, #422e25 50%, #b99269 100%);
+        }
+    .glass-effect { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
+    .fade-in-up { animation: fadeInUp .8s ease-out; }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(30px)} to{opacity:1; transform:translateY(0)} }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-accent to-white font-sans overflow-x-hidden">
+
+  <!-- Fixed Navigation -->
+  <!-- Fixed Navigation -->
+  <nav 
+    x-data="{ scrolled: false }" 
+    @scroll.window="scrolled = window.scrollY > 50"
+    :class="scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'"
+    class="fixed top-0 w-full z-50 transition-colors duration-300 border-b border-white/20">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex items-center">
+            <img src="./images/abaya-majesty-logo.png" alt="Abaya Majesty Logo"
+                class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="flex items-center space-x-8">
+            <a href="index.html#home" class="hover:text-gold transition-colors duration-300">Home</a>
+            <a href="index.html#collection" class="hover:text-gold transition-colors duration-300">Collection</a>
+            <a href="./returns-and-exchange-policy.html" class="hover:text-gold transition-colors duration-300">Return, Exchange & Shipping Policy</a>
+            <a href="./terms-and-conditions.html" class="hover:text-gold transition-colors duration-300">Terms & Conditions</a>
+            <a href="./disclaimer.html" class="hover:text-gold transition-colors duration-300">Disclaimer</a>
+            <a href="./privacy-policy.html" class="hover:text-gold font-medium text-gold">Privacy Policy</a>
+            <!-- <a href="./contact.html" class="hover:text-gold transition-colors duration-300">Contact</a> -->
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white/95 backdrop-blur-lg">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html#home" class="block px-3 py-2 text-black hover:text-primary">Home</a>
+        <a href="index.html#collection" class="block px-3 py-2 text-black hover:text-primary">Collection</a>
+        <a href="./returns-and-exchange-policy.html" class="block px-3 py-2 text-black hover:text-primary">Return, Exchange & Shipping Policy</a>
+        <a href="./terms-and-conditions.html" class="block px-3 py-2 text-black hover:text-primary">Terms & Conditions</a>
+        <a href="./disclaimer.html" class="block px-3 py-2 text-black hover:text-primary">Disclaimer</a>
+        <a href="./privacy-policy.html" class="block px-3 py-2 text-black hover:text-primary">Privacy Policy</a>
+        <!-- <a href="./contact.html" class="block px-3 py-2 text-gold font-medium">Contact</a> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="hero-gradient min-h-[60vh] flex items-center justify-center text-center text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-elegant font-bold mb-3">
+        Privacy Policy
+      </h1>
+      <p class="text-white/90">Thank you for shopping at Abaya Majesty.</p>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <article class="bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8 leading-relaxed text-gray-800">
+
+      <section id="privacy">
+        <h1 class="text-3xl font-bold mb-2">Privacy Policy</h1>
+        <p class="text-sm text-gray-500 mb-4">Last updated: September 03, 2025</p>
+        <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+        <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.</p>
+      </section>
+
+      <section id="interpretation">
+        <h2 class="text-2xl font-semibold mb-2">Interpretation and Definitions</h2>
+        <h3 class="text-xl font-medium mt-4">Interpretation</h3>
+        <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+        <h3 class="text-xl font-medium mt-4">Definitions</h3>
+        <p>For the purposes of this Privacy Policy:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Account means a unique account created for You to access our Service or parts of our Service.</li>
+          <li>Affiliate means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+          <li>Cookies are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
+          <li>Country refers to: Maharashtra, India</li>
+          <li>Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+          <li>Personal Data is any information that relates to an identified or identifiable individual.</li>
+          <li>Service refers to the Website.</li>
+          <li>Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+          <li>Third-party Social Media Service refers to any website or any social network website through which a User can log in or create an account to use the Service.</li>
+          <li>Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+          <li>Website refers to Abaya Majesty, accessible from <a href="http://www.abayamajesty.com" class="text-primary underline">http://www.abayamajesty.com</a></li>
+          <li>You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+        </ul>
+      </section>
+
+      <section id="collecting">
+        <h2 class="text-2xl font-semibold mb-2">Collecting and Using Your Personal Data</h2>
+
+        <h3 class="text-xl font-medium mt-4">Types of Data Collected</h3>
+        <h4 class="text-lg font-semibold mt-2">Personal Data</h4>
+        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Email address</li>
+          <li>First name and last name</li>
+          <li>Phone number</li>
+          <li>Address, State, Province, ZIP/Postal code, City</li>
+          <li>Usage Data</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold mt-2">Usage Data</h4>
+        <p>Usage Data is collected automatically when using the Service.</p>
+        <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+        <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+        <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
+      </section>
+
+      <section id="third-party">
+        <h2 class="text-2xl font-semibold mb-2">Information from Third-Party Social Media Services</h2>
+        <p>The Company allows You to create an account and log in to use the Service through the following Third-party Social Media Services:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Google</li>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+          <li>LinkedIn</li>
+        </ul>
+        <p>If You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Service's account, such as Your name, Your email address, Your activities or Your contact list associated with that account.</p>
+        <p>You may also have the option of sharing additional information with the Company through Your Third-Party Social Media Service's account. If You choose to provide such information and Personal Data, during registration or otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this Privacy Policy.</p>
+      </section>
+
+      <section id="tracking">
+        <h2 class="text-2xl font-semibold mb-2">Tracking Technologies and Cookies</h2>
+        <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>Cookies or Browser Cookies:</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
+          <li><strong>Web Beacons:</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
+        </ul>
+        <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
+      </section>
+
+      <section id="use-of-data">
+        <h2 class="text-2xl font-semibold mb-2">Use of Your Personal Data</h2>
+        <p>The Company may use Personal Data for the following purposes:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>To provide and maintain our Service, including to monitor the usage of our Service.</li>
+          <li>To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</li>
+          <li>For the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</li>
+          <li>To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</li>
+          <li>To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</li>
+          <li>To manage Your requests: To attend and manage Your requests to Us.</li>
+          <li>For business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</li>
+          <li>For other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</li>
+        </ul>
+
+        <p>We may share Your personal information in the following situations:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
+          <li>For business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+          <li>With Affiliates: We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+          <li>With business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
+          <li>With other users: when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside. If You interact with other users or register through a Third- Party Social Media Service, Your contacts on the Third-Party Social Media Service may see Your name, profile, pictures and description of Your activity. Similarly, other users will be able to view descriptions of Your activity, communicate with You and view Your profile.</li>
+          <li>With Your consent: We may disclose Your personal information for any other purpose with Your consent.</li>
+        </ul>
+      </section>
+
+      <section id="links">
+        <h2 class="text-2xl font-semibold mb-2">Links to Other Websites</h2>
+        <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+        <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+      </section>
+
+      <section id="changes">
+        <h2 class="text-2xl font-semibold mb-2">Changes to this Privacy Policy</h2>
+        <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+        <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.</p>
+        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+      </section>
+
+      <section id="contact">
+        <h2 class="text-2xl font-semibold mb-2">Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+        <p>
+          By email: <a href="mailto:abayamajesty0312@gmail.com" class="text-primary underline">abayamajesty0312@gmail.com</a><br>
+          By visiting this page on our website: <a href="https://www.abayamajesty.com" class="text-primary underline">https://www.abayamajesty.com</a><br>
+          By phone number: <a href="tel:+971504202725" class="text-primary underline">+971 504202725</a>
+        </p>
+      </section>
+    </article>
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <img src="./images/abaya-majesty-logo.png" alt="Abaya Majesty Logo"
+               class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
+          <p class="text-gray-400 mb-4">Premium modest fashion that celebrates elegance and tradition.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/abaya_majesty0312" class="text-gray-400 hover:text-gold transition-colors duration-300">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html#home" class="hover:text-white transition-colors duration-300">Home</a></li>
+            <li><a href="index.html#collection" class="hover:text-white transition-colors duration-300">Collection</a></li>
+            <li><a href="./returns-and-exchange-policy.html" class="hover:text-white transition-colors duration-300">Returns & Exchange Policy</a></li>
+            <li><a href="./terms-and-conditions.html" class="hover:text-white transition-colors duration-300">Terms & Conditions</a></li>
+            <li><a href="./disclaimer.html" class="hover:text-white transition-colors duration-300">Disclaimer</a></li>
+            <!-- <li><a href="./contact.html" class="hover:text-white transition-colors duration-300">Contact</a></li> -->
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+          <div class="space-y-2 text-gray-400">
+            <p><i class="fas fa-envelope mr-2"></i>
+              <a href="mailto:abayamajesty0312@gmail.com">abayamajesty0312@gmail.com</a>
+            </p>
+            <p><i class="fas fa-map-marker-alt mr-2"></i> India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400" x-data="{ year: new Date().getFullYear() }">
+        <p>&copy; <span x-text="year"></span> Abaya Majesty. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- (Optional) Smooth scroll if you add #ids on this page -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ mobileMenuOpen: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abaya Majesty - Terms and Conditions</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Read Abaya Majesty’s Terms and Conditions. Learn about our policies on service usage, account eligibility, third-party links, termination rights, warranties, and governing law for your online shopping experience in premium modest fashion.">
+  <meta name="keywords" content="abaya majesty terms and conditions, abaya majesty terms, modest fashion website terms, abaya store policies, abaya majesty legal, abaya majesty service agreement, abaya majesty india">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+            colors: {
+                primary: '#422e25',
+                secondary: '#060504',
+                accent: '#FEF7ED',
+                'gold': '#D4A574'
+            },
+            fontFamily: {
+                'arabic': ['Amiri', 'serif'],
+                'elegant': ['Playfair Display', 'serif']
+            }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+    .hero-gradient {
+            background: linear-gradient(135deg, #422e25 0%, #422e25 50%, #b99269 100%);
+        }
+    .glass-effect { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
+    .fade-in-up { animation: fadeInUp .8s ease-out; }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(30px)} to{opacity:1; transform:translateY(0)} }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-accent to-white font-sans overflow-x-hidden">
+
+  <!-- Fixed Navigation -->
+  <!-- Fixed Navigation -->
+  <nav 
+    x-data="{ scrolled: false }" 
+    @scroll.window="scrolled = window.scrollY > 50"
+    :class="scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'"
+    class="fixed top-0 w-full z-50 transition-colors duration-300 border-b border-white/20">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex items-center">
+            <img src="./images/abaya-majesty-logo.png" alt="Abaya Majesty Logo"
+                class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="flex items-center space-x-8">
+            <a href="index.html#home" class="hover:text-gold transition-colors duration-300">Home</a>
+            <a href="index.html#collection" class="hover:text-gold transition-colors duration-300">Collection</a>
+            <a href="./returns-and-exchange-policy.html" class="hover:text-gold transition-colors duration-300">Return, Exchange & Shipping Policy</a>
+            <a href="./terms-and-conditions.html" class="hover:text-gold font-medium text-gold">Terms & Conditions</a>
+            <a href="./disclaimer.html" class="hover:text-gold transition-colors duration-300">Disclaimer</a>
+            <a href="./privacy-policy.html" class="hover:text-gold transition-colors duration-300">Privacy Policy</a>
+            <!-- <a href="./contact.html" class="hover:text-gold transition-colors duration-300">Contact</a> -->
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white/95 backdrop-blur-lg">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html#home" class="block px-3 py-2 text-black hover:text-primary">Home</a>
+        <a href="index.html#collection" class="block px-3 py-2 text-black hover:text-primary">Collection</a>
+        <a href="./returns-and-exchange-policy.html" class="block px-3 py-2 text-black hover:text-primary">Return, Exchange & Shipping Policy</a>
+        <a href="./terms-and-conditions.html" class="block px-3 py-2 text-black hover:text-primary">Terms & Conditions</a>
+        <a href="./disclaimer.html" class="block px-3 py-2 text-black hover:text-primary">Disclaimer</a>
+        <a href="./privacy-policy.html" class="block px-3 py-2 text-black hover:text-primary">Privacy Policy</a>
+        <!-- <a href="./contact.html" class="block px-3 py-2 text-gold font-medium">Contact</a> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="hero-gradient min-h-[60vh] flex items-center justify-center text-center text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-elegant font-bold mb-3">
+        Terms & Conditions
+      </h1>
+      <p class="text-white/90">Thank you for shopping at Abaya Majesty.</p>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <article class="bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8 leading-relaxed text-gray-800">
+
+      <section id="terms">
+        <h1 class="text-3xl font-bold mb-2">Terms and Conditions</h1>
+        <p class="text-sm text-gray-500 mb-4">Last updated: September 03, 2025</p>
+        <p>Please read these terms and conditions carefully before using Our Service.</p>
+      </section>
+
+      <section id="interpretation">
+        <h2 class="text-2xl font-semibold mb-2">Interpretation and Definitions</h2>
+        <h3 class="text-xl font-medium mt-4">Interpretation</h3>
+        <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+        
+        <h3 class="text-xl font-medium mt-4">Definitions</h3>
+        <p>For the purposes of these Terms and Conditions:</p>
+        <p>Country refers to: Maharashtra, India<br>
+        Company (referred to as either Abaya Majesty, We in this Agreement) refers to Abaya Majesty, Mumbra, Thane 400612.<br>
+        Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.<br>
+        Service refers to the Website.<br>
+        Terms and Conditions (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the Terms and Conditions Generator.<br>
+        Third-party Social Media Service means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.<br>
+        Website refers to Abaya Majesty, accessible from <a href="http://www.abayamajesty.com" class="text-primary underline">http://www.abayamajesty.com</a><br>
+        You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+      </section>
+
+      <section id="acknowledgment">
+        <h2 class="text-2xl font-semibold mb-2">Acknowledgment</h2>
+        <p>These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.</p>
+        <p>Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.</p>
+        <p>By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.</p>
+        <p>You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.</p>
+        <p>Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.</p>
+      </section>
+
+      <section id="links">
+        <h2 class="text-2xl font-semibold mb-2">Links to Other Websites</h2>
+        <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.</p>
+        <p>The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+        <p>We strongly advise You to read the terms and conditions and privacy policies of any third- party web sites or services that You visit.</p>
+      </section>
+
+      <section id="termination">
+        <h2 class="text-2xl font-semibold mb-2">Termination</h2>
+        <p>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.</p>
+        <p>Upon termination, Your right to use the Service will cease immediately.</p>
+      </section>
+
+      <section id="disclaimer">
+        <h2 class="text-2xl font-semibold mb-2">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+        <p>The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.</p>
+        <p>Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.</p>
+        <p>Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.</p>
+      </section>
+
+      <section id="law">
+        <h2 class="text-2xl font-semibold mb-2">Governing Law</h2>
+        <p>The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</p>
+      </section>
+
+      <section id="changes">
+        <h2 class="text-2xl font-semibold mb-2">Changes to These Terms and Conditions</h2>
+        <p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.</p>
+        <p>By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.</p>
+      </section>
+
+      <section id="contact">
+        <h2 class="text-2xl font-semibold mb-2">Contact Us</h2>
+        <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
+        <p>
+          By email: <a href="mailto:abayamajesty0312@gmail.com" class="text-primary underline">abayamajesty0312@gmail.com</a><br>
+          By visiting this page on our website: <a href="https://www.abayamajesty.com" class="text-primary underline">https://www.abayamajesty.com</a><br>
+          By phone number: <a href="tel:+971504202725" class="text-primary underline">+971 50 420 2725</a>
+        </p>
+      </section>
+  </article>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <img src="./images/abaya-majesty-logo.png" alt="Abaya Majesty Logo"
+               class="h-32 w-auto object-contain bg-white rounded-full p-2 shadow-md">
+          <p class="text-gray-400 mb-4">Premium modest fashion that celebrates elegance and tradition.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/abaya_majesty0312" class="text-gray-400 hover:text-gold transition-colors duration-300">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html#home" class="hover:text-white transition-colors duration-300">Home</a></li>
+            <li><a href="index.html#collection" class="hover:text-white transition-colors duration-300">Collection</a></li>
+            <li><a href="./returns-and-exchange-policy.html" class="hover:text-white transition-colors duration-300">Returns & Exchange Policy</a></li>
+            <li><a href="./disclaimer.html" class="hover:text-white transition-colors duration-300">Disclaimer</a></li>
+            <li><a href="./privacy-policy.html" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li> 
+            <!-- <li><a href="./contact.html" class="hover:text-white transition-colors duration-300">Contact</a></li> -->
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+          <div class="space-y-2 text-gray-400">
+            <p><i class="fas fa-envelope mr-2"></i>
+              <a href="mailto:abayamajesty0312@gmail.com">abayamajesty0312@gmail.com</a>
+            </p>
+            <p><i class="fas fa-map-marker-alt mr-2"></i> India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400" x-data="{ year: new Date().getFullYear() }">
+        <p>&copy; <span x-text="year"></span> Abaya Majesty. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- (Optional) Smooth scroll if you add #ids on this page -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
